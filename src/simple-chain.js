@@ -6,7 +6,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 const chainMaker = {
   chain: [],
-  
+
   getLength() {
     return this.chain.length;
   },
@@ -24,7 +24,7 @@ const chainMaker = {
       Math.floor(position) !== position
     ) {
       this.chain = [];
-      throw new Error('Invalid position');
+      throw new Error("You can't remove incorrect link!");
     }
     this.chain.splice(position - 1, 1);
     return this;
@@ -39,7 +39,7 @@ const chainMaker = {
     const result = this.chain.join('~~');
     this.chain = [];
     return result;
-  },
+  }
 };
 
 module.exports = {

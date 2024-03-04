@@ -76,6 +76,7 @@ class VigenereCipheringMachine {
     return this.isDirect ? decryptedMessage : decryptedMessage.split('').reverse().join('');
   }
 }
+
 module.exports = {
   VigenereCipheringMachine
 };
